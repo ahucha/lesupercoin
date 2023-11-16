@@ -22,6 +22,7 @@ class AnnonceController extends AbstractController
         ]);
     }
 
+    // test commitghgj
     #[Route('/annonce/add', name: 'annonce_add')]
     public function addAnnonce(ManagerRegistry $doctrine)
     {

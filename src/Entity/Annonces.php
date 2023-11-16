@@ -26,7 +26,7 @@ class Annonces
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $createdat = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    #[ORM\Column(type: Types::DATE_MUTABLE, nullable:true)]
     private ?\DateTimeInterface $updatedat = null;
 
     #[ORM\ManyToOne(inversedBy: 'annonces')]

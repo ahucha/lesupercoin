@@ -22,7 +22,7 @@ class Categories
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $createdat = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    #[ORM\Column(type: Types::DATE_MUTABLE, nullable:true)]
     private ?\DateTimeInterface $updatedat = null;
 
     #[ORM\OneToMany(mappedBy: 'category', targetEntity: Annonces::class)]

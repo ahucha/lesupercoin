@@ -32,6 +32,9 @@ class Annonces
     #[ORM\ManyToOne(inversedBy: 'annonces')]
     private ?Categories $category = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $image = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -105,6 +108,18 @@ class Annonces
     public function setCategory(?Categories $category): static
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(?string $image): static
+    {
+        $this->image = $image;
 
         return $this;
     }

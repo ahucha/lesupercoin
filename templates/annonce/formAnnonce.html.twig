@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% block header %} {% endblock %}
+{% block body %}
+<section class="py-5 container">
+    <h1>Ajouter une annonce</h1>
+{{ form_start(formAnnonce)}}
+    {{ form_row(formAnnonce.title)}}
+    {{ form_row(formAnnonce.prix)}}
+    {{ form_row(formAnnonce.content)}}
+    <input type="submit" value="Ajouter" class="btn btn-sm btn-success">
+{{ form_end(formAnnonce) }}
+{# {{ form(formAnnonce)}} #}
+</section>
+{% endblock %}
